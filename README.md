@@ -13,6 +13,7 @@ GroupSession => 5.1.1
 git clone https://github.com/krsuhjunho/Almalinux8-GroupSession
 
 cd Almalinux8-GroupSession
+
 ./docker-run.sh
 
 ##Change Port && Hostname && Container Name
