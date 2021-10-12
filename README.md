@@ -10,7 +10,7 @@ Tomcat       => 9.0.54
 
 GroupSession => 5.1.1
 
-git pull https://github.com/krsuhjunho/Almalinux8-GroupSession
+git clone https://github.com/krsuhjunho/Almalinux8-GroupSession
 
 ./docker-run.sh
 
