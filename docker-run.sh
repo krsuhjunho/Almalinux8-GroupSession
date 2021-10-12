@@ -13,6 +13,31 @@ TIME_ZONE="Asia/Tokyo"
 COMMIT_COMMENT="$2"
 BUILD_OPTION="$1"
 
+#FUNCTION
+SOURCE_FILE_CHECK_TOMCAT()
+{
+FILE="./apache-tomcat-9.0.54.tar.gz"
+if [ -f "$FILE" ]; then
+    echo "$FILE exists."
+else 
+    echo "$FILE does not exist."
+	echo "$FILE Download Start"	
+	wget https://ftp.wayne.edu/apache/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz
+fi
+}
+
+SOURCE_FILE_CHECK_GROUPSESSION()
+{
+FILE="./gsession.war"
+if [ -f "$FILE" ]; then
+    echo "$FILE exists."
+else 
+    echo "$FILE does not exist."
+	echo "$FILE Download Start"
+	wget https://www.sjts.co.jp/download/gs/5.1.1/gsession.war
+fi
+}
+
 DOCKER_IMAGE_BUILD()
 {
 docker build -t ${BASE_IMAGE_NAME} .
@@ -65,16 +90,19 @@ echo ""
 MAIN()
 {
 
+SOURCE_FILE_CHECK_TOMCAT
+SOURCE_FILE_CHECK_GROUPSESSION
+
 if [ "$BUILD_OPTION" == "--build" ]; then
     DOCKER_IMAGE_BUILD
-	#DOCKER_IMAGE_PUSH
+	DOCKER_IMAGE_PUSH
 	#GIT_COMMIT_PUSH
 fi
 
-DOCKER_CONTAINER_REMOVE
-DOCKER_CONTAINER_CREATE
-DOCKER_CONTAINER_BASH
-DOCKER_CONTAINER_URL_SHOW
+#DOCKER_CONTAINER_REMOVE
+#DOCKER_CONTAINER_CREATE
+#DOCKER_CONTAINER_BASH
+#DOCKER_CONTAINER_URL_SHOW
 }
 
 MAIN
