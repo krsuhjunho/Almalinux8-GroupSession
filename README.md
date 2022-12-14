@@ -4,7 +4,7 @@ AlmaLinux release 8.4 (Electric Cheetah)
 
 https://groupsession.jp/
 
-JAVA         => Openjdk12
+JAVA         => Openjdk11
 
 Tomcat       => 9.0.70
 
