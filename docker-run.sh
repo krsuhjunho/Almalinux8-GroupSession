@@ -22,7 +22,7 @@ if [ -f "$FILE" ]; then
 else 
     echo "$FILE does not exist."
 	echo "$FILE Download Start"	
-	wget https://ftp.wayne.edu/apache/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz
+	wget https://ftp.wayne.edu/apache/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
 fi
 }
 
@@ -34,7 +34,7 @@ if [ -f "$FILE" ]; then
 else 
     echo "$FILE does not exist."
 	echo "$FILE Download Start"
-	wget https://www.sjts.co.jp/download/gs/5.1.1/gsession.war
+	wget https://www.sjts.co.jp/download/gs/5.3.0/gsession.war
 fi
 }
 
