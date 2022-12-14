@@ -6,9 +6,9 @@ https://groupsession.jp/
 
 JAVA         => Openjdk12
 
-Tomcat       => 9.0.54
+Tomcat       => 9.0.70
 
-GroupSession => 5.1.1
+GroupSession => 5.3.0
 
 git clone https://github.com/krsuhjunho/Almalinux8-GroupSession
 
